@@ -1,0 +1,80 @@
+/* header */
+:root{
+    --tipo-letra: 'Mukta', sans-serif;
+}
+
+.header{
+    height: 60vh;
+    background-image:url(../img/fondo-menu.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* title */
+.section-title{
+    height: 20vh;
+    display: flex;
+    text-align: center;
+}
+.container-title{
+    margin: auto;
+}
+.container-title h2{
+    color: var(--negro-nav);
+    font-family: 'Literata', serif;
+}
+
+/* cards */
+.section-menu{
+    width: 80%;
+    margin: auto;
+    
+}
+.container-cards{
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    
+    
+}
+.container-cards h2{
+    margin-left: 20px;
+    font-weight: 700;
+    font-family: var(--tipo-letra);
+}
+.card-group{
+   margin: auto;
+}
+.card{
+    width: 90%;
+    outline: .1px solid rgb(218, 207, 207);
+    border: 0;
+}
+.card h5, p, h2{
+    font-family: var(--tipo-letra);
+
+}
+.card img{
+    height: 200px;
+    object-fit: cover;
+    align-items: center;
+}
+.card-footer{
+    border: 0;
+    background-color: white;
+    font-family: var(--tipo-letra);
+    
+}
+.btnA{
+    display: block;
+    padding: 5px 30px 5px 30px;
+    font-size: 18px;
+    outline: 1px solid #dc2f02;
+    border:0px;
+    color: #dc2f02;
+    background-color: var(--color-blanco);
+}
+.btnA:hover{
+    background-color:#dc2f02;
+}
