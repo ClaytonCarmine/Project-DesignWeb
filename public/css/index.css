@@ -79,7 +79,24 @@
     position: relative;
     filter:brightness(0.8);
 }
-
+/* menu */
+.card-menu{
+    height: 400px; 
+    width:300px;
+    padding: 10px;
+}
+.title-menu{
+    background-color: var(--amarrillo);
+    height: 100px;
+    clip-path: polygon(0 3%, 100% 50%, 100% 100%, 0% 100%);
+    transition: all .3s;
+}
+.card-menu:hover .title-menu{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    text-align: center;
+    transition: all .3s;
+    
+}
 /* banner */
 .banner{
     height: 60vh;

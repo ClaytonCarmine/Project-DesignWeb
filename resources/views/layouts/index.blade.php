@@ -93,9 +93,31 @@
 <!-- Menu -->
 <div class="alimentod mt-5">
   <h5 class="text-center titulo2 fs-1">Menu</h5>
+  <div class="container">
+      <div class="card-group" >
+        <div class="card card-menu m-auto" >
+          <img src="img/menu-img1.png" class="card-img-top h-100 w-100" style=" object-fit:contain;" alt="...">
+          <div class="card-body title-menu">
+            <h5 class="card-title fs-4 titulo2">Hamburguesa</h5>
+          </div>
+        </div>
+        <div class="card m-auto card-menu">
+          <img src="img/menu-img2.png" class="card-img-top h-100" style=" object-fit:contain;" alt="...">
+          <div class="card-body title-menu">
+            <h5 class="card-title fs-4 titulo2">Mega Burrito</h5>
+          </div> 
+        </div>
+        <div class="card m-auto card-menu">
+          <img src="img/menu-img3.png" class="card-img-top h-100" style=" object-fit:contain;" alt="...">
+          <div class="card-body title-menu">
+            <h5 class="card-title fs-4 titulo2">Bonneless</h5>
+          </div>
+        </div>
+    </div>
+  </div>
 </div>
 <!-- banner -->
-<div class="banner">
+<div class="banner mt-5">
   <div class="card">
     <h5 class="card-title titulo3 display-5">Envio Gratis</h5>
     <h5 class="card-title text-white titulo2 display-3">En tu Primera Compra</h5>
