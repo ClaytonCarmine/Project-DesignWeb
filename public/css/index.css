@@ -90,13 +90,23 @@
     height: 100px;
     clip-path: polygon(0 3%, 100% 50%, 100% 100%, 0% 100%);
     transition: all .3s;
+    
 }
 .card-menu:hover .title-menu{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    text-align: center;
     transition: all .3s;
+}
+.titulo-menu{
+    width: 100%;
+    height: auto;
+}
+.card-menu:hover .titulo-menu{
+    
+    transform: translate(25%, 0%);
+    transition: 450ms ease-in-out;
     
 }
+
 /* banner */
 .banner{
     height: 60vh;

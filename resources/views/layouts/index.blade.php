@@ -104,7 +104,7 @@
         <div class="card m-auto card-menu">
           <img src="img/menu-img2.png" class="card-img-top h-100" style=" object-fit:contain;" alt="...">
           <div class="card-body title-menu">
-            <h5 class="card-title fs-4 titulo2">Mega Burrito</h5>
+            <h5 class="card-title titulo-menu fs-4 titulo2">Mega Burrito</h5>
           </div> 
         </div>
         <div class="card m-auto card-menu">
