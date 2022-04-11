@@ -4,66 +4,83 @@
     <head>
         <link rel="stylesheet" href="css/checkout.css">
     </head>
-    <div class="container " style="height: 80vh;">
-        <div class="row d-flex h-100 justify-content-center alig-items-center">
-            <div class="col-sm-12 m-auto">
-                @if(count(Cart::getContent()))
-                    
-                    <table class="table table-striped">
-                        <thead class="text-center">
-                            <th>Producto</th>
-                            <th>Nombre</th>
-                            <th>Cantidad</th>
-                            <th>Precio</th>
-                            <th>Subtotal</th>
-                            <th>
-                            <form action="{{route('cart.clear')}}" method="POST">
-                                    @csrf
-                                    <button type="submit" class="btn btn-sm text-danger">vaciar carrito <i class="fa-solid fa-trash"></i></button>
-                                </form>
-                            </th>
-                        </thead>
-                        <tbody>
-                           
-                            @foreach(Cart::getContent() as $item)
-                                <tr class="text-center">
-                                    <td><img src="{{$item->attributes->img}}" class="img-fluid" width="120vh" alt=""></td>
-                                    <td><p>{{$item->name}}</p></td>
-                                    <td>
-                                    <div class="form-group col-sm-4 m-auto">
-                                        <select class="form-control" id="sel1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                        </select>
-                                    </div>
-                                    </td>
-                                    <td>{{$item->price}}</td>
-                                    <td>{{$item->price}}</td>
-                                    <td>
-                                        <form action="{{route('cart.removeitem')}}" method="POST">
-                                            @csrf
-                                            <input type="hidden" name="id" value="{{$item->id}}">
-                                            <button type="submit" class="btn btn-sm text-danger">Eliminar <i class="fa-lg fa-solid fa-xmark"></i></i></button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <td><a href="">Comprar</a></td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                @else 
-                    <div>
-                        <h2 class="text-center">Tu carrito de está vacío. </h2>
-                        <p class="text-center">Agrega algun producto para <a href="/menu">Comprar</a></p>
-                    </div>
-                @endif
+    
+    <div class="container cart-page" style="min-height: 70vh" >
+        @if(session('status'))
+            <h5 class="titulo3 fs-2">{{session('status')}}</h5>
+        @endif
+        @if(count(Cart::getContent()))   
+            <table>
+                <tr>
+                    <th class="titulo2 fs-4">Producto</th>
+                    <th class="titulo2 fs-4">Cantidad</th>
+                    <th class="titulo2 fs-4">Subtotal</th>
+                </tr>
+                @foreach(Cart::getContent() as $item) 
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="{{$item->attributes->img}}" height="100vh" width="100vh" alt="">
+                                <div>
+                                    <h5 class="titulo3 fs-5">{{$item->name}}</h5>
+                                    <small class="fs-6 text-muted texto1">Precio: ${{$item->price}}</small>
+                                    <br>
+                                    <form action="{{route('cart.removeitem')}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" name="id" value="{{$item->id}}">
+                                        <button type="submit" class="btn btn-sm btn-eliminar fs-6 texto1">Remover</button>
+                                    </form>
+                                </div>
+                            </div>     
+                        </td>
+                        <td><h5 class="titulo2">{{$item->quantity}}</h5></td>
+                        <td class="texto1 fs-5"> ${{$item->price*$item->quantity}}</td>
+                    </tr>
+                @endforeach
+            </table>
+            @php
+                $subtotal=0;
+            @endphp
+            <p class="d-none">
+                @foreach (Cart::getContent() as $item)
+                {{
+                    $subtotal=$subtotal+intval($item->price*$item->quantity)
+
+                }}
+                @endforeach
+            </p>
+            <div class="total-price">
+                <table>
+                    <tr>
+                        <td class="fs-5 titulo2">Subtotal</td>
+                        <td class="fs-5 texto1">${{$subtotal}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fs-5 titulo2">I.V.A</td>
+                        <td class="fs-5 texto1">${{$totalIVA=$subtotal*0.08}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fs-5 titulo2">Total</td>
+                        <td class="fs-5 texto1">${{$totalCompra=$subtotal+$totalIVA}}</td>
+                    </tr>
+                </table>
             </div>
-        </div>
-    </div>
+            <div class="total-price">
+                @guest()
+                    <a href="/login" class="btn btn-sm titulo2 fs-4 btn-comprar">Comprar</a>
+                @else
+                    <form action="{{route('paypal.payWithPayPal')}}" method="POST">
+                        @csrf
+                        <input type="hidden" name="id" value="{{$totalCompra}}">
+                        <button type="submit" class="btn btn-sm titulo1 fs-4 btn-comprar">Comprar Ahora</button>
+                    </form>                
+                @endguest  
+            </div>
+        @else 
+            <div>
+                <h2 class="text-center">Tu carrito de está vacío. </h2>
+                <p class="text-center">Agrega algun producto para <a href="/menu">Comprar</a></p>
+            </div>
+        @endif
+     </div>
 @endsection

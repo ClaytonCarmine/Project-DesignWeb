@@ -19,7 +19,13 @@
     font-family: 'Sarala', sans-serif;
 
 }
-
+.navbar-toggler{
+    border: 0;
+}
+.icon-nav{
+    color: #01161E;
+    font-size: 30px;
+}
 
 /* footer */
 .footer{
@@ -28,30 +34,18 @@
 .footer-text{
     margin: auto;   
 }
+.btn-comprar1{
+    background-color: var(--naranja);
+    color: white;
+}
+.btn-comprar1:hover{
+    color: var(--naranja);
+    background-color: white;
+    
+}
+
 
 /* buttoms */
-
-.btn1{
-    color: var(--negro-nav);
-    background-color: var(--color-blanco);
-    border:solid 1px var(--negro-nav);
-}
-.btn1:hover{
-    color: var(--color-blanco);
-    background-color: var(--negro-nav);
-}
-
-.btn-blanco{
-    background-color: var(--negro-nav);
-    color: var(--color-blanco);
-    border: solid 1px var(--color-blanco);
-}
-.btn-blanco:hover{
-    background-color: var(--color-blanco);
-    color: var(--negro-nav);
-}
-
-
 
 
 

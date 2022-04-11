@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Comida;
+use App\Models\Bebida;
 
 use Cart ;
 use Illuminate\Support\Arr;
@@ -13,16 +14,21 @@ class CartController extends Controller
 {
     
     public function add(Request $request){
-         $producto=Comida::find($request->producto_id);
-         Cart::add(
-            $producto->id,
-            $producto->nombre,
-            $producto->precio,
-            1,
-            array("img"=>$producto->img)
-         );
-        return  back()->with('success',"$producto->nombre se ha agregado correctamente");
+        
+            $producto=Comida::find($request->producto_id);
+            Cart::add(
+                $producto->id,
+                $producto->nombre,
+                $producto->precio,
+                $request->quantity,
+                array("img"=>$producto->img)
+            );
+            return  back()->with('success',"$producto->nombre se ha agregado correctamente"); 
+        
+         
+              
     }
+    
 
     public function cart(){
         $params=[
@@ -39,6 +45,7 @@ class CartController extends Controller
     }
     public function clear(){
         Cart::clear();
+        
         return back()->with('success','Se borraron todos los productos');
     }
 

@@ -14,7 +14,7 @@ class ticket extends Model
     public function comida(){
         return $this->belongsTo('App\Models\Comida');
     }
-    public function bebida(){
-        return $this->belongsTo('App\Models\Bebida');
+    public function lista_compra(){
+        return $this->hasMany('App\Models\lista_compra');
     }
 }

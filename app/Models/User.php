@@ -22,6 +22,12 @@ class User extends Authenticatable
         'apellido',
         'email',
         'password',
+        'direccion',
+        'colonia',
+        'ncasa',
+        'ciudad',
+        'cp',
+        'celular',  
     ];
 
     /**
@@ -45,5 +51,8 @@ class User extends Authenticatable
 
     public function ticket(){
         return $this->hasMany('App\Models\Ticket');
+    }
+    public function lista_compra(){
+        return $this->hasMany('App\Models\lista_compra');
     }
 }
