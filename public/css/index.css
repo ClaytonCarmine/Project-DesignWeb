@@ -1,0 +1,173 @@
+.carousel-dark .carousel-indicators [data-bs-target]{
+    background-color: var(--color-blanco);
+    
+}
+
+.carousel-indicators [data-bs-target]{
+    clip-path: circle(50% at 50% 50%);
+    height: 5px;
+    background-clip:unset;
+    box-sizing:border-box;
+    padding: 5px;
+}
+.card{
+    background-color:transparent;
+    border: none;
+    
+}
+.carousel-caption{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.container-info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.container-text-slider{
+    width: 50%;
+}
+.container-img-slider{
+    width: 50%;
+}
+.btn-comprar{
+    margin:auto;
+    border-radius: 10px;
+    width: 20vh;
+    text-decoration: none;
+    color: var(--color-blanco);
+    padding: 10px;
+    background: var(--amarrillo);
+}
+.btn-comprar:hover{
+    color: var(--naranja);
+    background-color: white;
+    
+}
+.texto1{
+    font-family: 'Sarala', sans-serif;
+    
+}
+.titulo1{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+.titulo1::before{
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: -12px;
+    left: 29%;
+    content: "";
+    display: inline-block;
+    background-color:var(--naranja);
+    z-index: -1;
+    transform: matrix3d(0.90349, -0.03487, 0, -0.0002, -0.27326, 0.99187, 0, 0.00005, 0, 0, 1, 0, 0, 3, 0, 1);
+    will-change: transform;
+}
+.titulo2{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    
+}
+.titulo3{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color:var( --amarrillo);
+}
+
+.img-slider{
+    position: relative;
+    filter:brightness(0.8);
+}
+/* menu */
+.alimentos{
+    min-height: 90vh;
+}
+.card-menu{
+    height: 250px; 
+    width:300px;
+    padding: 10px;
+}
+.title-menu{
+    background-color: var(--amarrillo);
+    height: 100px;
+    clip-path: polygon(0 3%, 100% 50%, 100% 100%, 0% 100%);
+    transition: all .3s;
+    
+}
+.card-menu:hover .title-menu{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: all .3s;
+}
+.titulo-menu{
+    width: 100%;
+    height: auto;
+    
+}
+.card-menu:hover{
+    transform:scale(1.1);
+    transition: 450ms ease-in-out;
+    transition: all .5s;
+}
+
+/* banner */
+.banner{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    background-image: url('/img/fondo-banner.jpg');
+    background-position: bottom;
+    background-size: cover;
+    
+}
+/* service */
+.service{
+    min-height:60vh ;
+}
+.img-service{
+    object-fit: contain;
+    height: 70px;
+}
+/* galeria */
+.card-group .card{
+    margin-bottom:0px;
+}
+.card-galeria{
+    transition: all .5s;
+    margin: 0;
+    padding: 0;
+    
+}
+.card-galeria:hover{
+    transform:scale(1.1);
+    transition: all .5s;
+    z-index: 2;
+
+}
+
+
+@media(max-width:700px){
+    .titulo1::before{
+        width: 100%;
+        left: 0px;
+    }
+}

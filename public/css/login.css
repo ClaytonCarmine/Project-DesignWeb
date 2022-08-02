@@ -1,0 +1,31 @@
+
+.container{
+    
+}
+.container-cards{
+    height: 100%;
+    display: flex;
+}
+.card{
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    border-radius: 20px;
+}
+.card-header{
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10px;
+    border: 0;
+    position: relative;
+    background-color:white;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btna{
+    border:0;
+    background-color: var(--negro-nav);
+}

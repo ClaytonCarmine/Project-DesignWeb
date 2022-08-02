@@ -1,0 +1,72 @@
+.texto1{
+    font-family: 'Sarala', sans-serif;
+    
+}
+.titulo1{
+    width: 110%;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+.titulo1::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 0%;
+    left: 0%;
+    content: "";
+    display: inline-block;
+    background-color:var(--naranja);
+    z-index: -1;
+    transform: matrix3d(0.90349, -0.03487, 0, -0.0002, -0.27326, 0.99187, 0, 0.00005, 0, 0, 1, 0, 0, 3, 0, 1);
+    will-change: transform;
+}
+.titulo2{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    
+}
+.titulo3{
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    color:var( --amarrillo);
+}
+
+.cart-page{
+    margin: 80px auto;
+}
+.cart-page table{
+    width: 100%;
+    margin:auto;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background:var(--naranja);
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;   
+}
+
+td img{
+    margin-right: 10px;
+}
+
+
+.btn-comprar:hover{
+    color: var(--amarrillo);
+}
