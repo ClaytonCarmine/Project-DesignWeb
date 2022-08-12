@@ -54,16 +54,22 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary btna">
+                                <div class="form-group">
+                                    {!! NoCaptcha::renderJs('es', false, 'onloadCallback') !!}
+                                    {!! NoCaptcha::display() !!}
+                                </div>
+                                <button type="submit" class="btn btn-primary btna mt-5">
                                     {{ __('Login') }}
                                 </button>
 
+
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link mt-5" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
                             </div>
+                            
                         </div>
                         <div class="row mb-0 ">
                             <div class="col-md-8 offset-md-4 mt-5 ">
@@ -78,4 +84,10 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    var onloadCallback = function() {
+      alert("grecaptcha is ready!");
+    };
+  </script>
+  
 @endsection

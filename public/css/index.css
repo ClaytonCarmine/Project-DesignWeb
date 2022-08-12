@@ -2,7 +2,10 @@
     background-color: var(--color-blanco);
     
 }
-
+#map{
+    width: 100%;
+    height: 400px;
+}
 .carousel-indicators [data-bs-target]{
     clip-path: circle(50% at 50% 50%);
     height: 5px;

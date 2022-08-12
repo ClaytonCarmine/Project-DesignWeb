@@ -7,11 +7,11 @@
     <!-- header -->
     <header class="header">
         <div class="card bg-dark text-white h-100">
-            <img src="img/banner-menu1.jpg"class="card-img" height="100%" style="object-fit:cover; filter:brightness(0.4);" alt="...">
+            <img src="img/fondo-slider1.jpg"class="card-img" height="100%" style="object-fit:cover; filter:brightness(0.4);" alt="...">
             <div class="card-img-overlay  d-flex">
               <div class="info-header text-center m-auto">
-                <h5 class="card-title display-2 titulo3">Las mejores Hambueguesa</h5>
-                <h5 class="card-title display-5 titulo2">Elije tu Preferida</h5>
+                <h5 class="card-title display-2 titulo3">Las mejores ofertas</h5>
+                <h5 class="card-title display-5 titulo2">Estamos para tenderte</h5>
               </div>
               
             </div>

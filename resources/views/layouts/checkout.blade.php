@@ -68,11 +68,14 @@
             <div class="total-price">
                 @guest()
                     <a href="/login" class="btn btn-sm titulo2 fs-4 btn-comprar">Comprar</a>
+                    
+
                 @else
                     <form action="{{route('paypal.payWithPayPal')}}" method="POST">
                         @csrf
                         <input type="hidden" name="id" value="{{$totalCompra}}">
                         <button type="submit" class="btn btn-sm titulo1 fs-4 btn-comprar">Comprar Ahora</button>
+                        
                     </form>                
                 @endguest  
             </div>
@@ -83,4 +86,6 @@
             </div>
         @endif
      </div>
+     
+     
 @endsection

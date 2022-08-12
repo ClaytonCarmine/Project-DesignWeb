@@ -19,14 +19,13 @@
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
                 <i class="fa-solid fa-bars icon-nav"></i>
             </button>
-            <a href="/" class="navbar-brand fs-2 text-dark" style="font-family: 'Lilita One', cursive;"><i class="fa-solid fa-burger"></i> La cueva</a>
+            <a href="/" class="navbar-brand fs-2 text-dark" style="font-family: 'Lilita One', cursive;">Medicate</a>
             
             
             <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <div class="navbar-nav ml-auto ">
                     <a href="/" class="nav-item nav-link fs-5 active text-dark">Home</a>
                     <a href="/menu" class="nav-item nav-link fs-5 active text-dark">Comprar</a>
-                    <a href="/menu" class="nav-item nav-link fs-5 active text-dark">Menu</a>
                 </div>
                 <div class="btn-group ">
                     @guest
@@ -91,5 +90,6 @@
     </div>
     <script src="https://kit.fontawesome.com/7f2bed488b.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    
 </body>
 </html>

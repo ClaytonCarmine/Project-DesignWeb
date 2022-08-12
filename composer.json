@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "anhskohbo/no-captcha": "^3.4",
         "darryldecode/cart": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -36,6 +37,10 @@
         }
     },
     "scripts": {
+        "post-install-cmd": [
+            "php artisan clear-compiled",
+            "chmod -R 777 public/"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -62,4 +67,5 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true
+    
 }

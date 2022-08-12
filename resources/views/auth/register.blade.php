@@ -152,6 +152,10 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group m-auto">
+                            {!! NoCaptcha::renderJs('es', false, 'onloadCallback') !!}
+                            {!! NoCaptcha::display() !!}
+                        </div>
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary btna">
