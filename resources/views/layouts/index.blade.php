@@ -71,8 +71,8 @@
   <div class="card bg-dark text-white d-flex m-5">
     <img src="img/fondo-card1.jpg" class="card-img img-fluid h-100 w-100" style="object-fit: cover; filter:brightness(0.8); " alt="...">
     <div class="card-footer text-center position-absolute fixed-bottom" style="border: none;">
-      <h5 class="card-title display-4 titulo2">Sandwiches</h5>
-      <h5 class="card-title fs-3">Desayuno Especial</h5>
+      <h5 class="card-title display-4 titulo2">Medicamentos</h5>
+      <h5 class="card-title fs-3">En cualquier momento</h5>
     </div>
   </div>
   <div class="card bg-dark text-white d-flex m-5">
@@ -85,8 +85,8 @@
   <div class="card bg-dark text-white d-flex m-5">
     <img src="img/fondo-card2.jpg" class="card-img img-fluid h-100" style="object-fit: cover; filter:brightness(0.8);"  alt="...">
     <div class="card-footer text-center position-absolute fixed-bottom" style="border: none;">
-      <h5 class="card-title  display-4 titulo2">Snaks</h5>
-      <h5 class="card-title fs-3">Prueba Nuestros Deliciosos Snaks</h5>
+      <h5 class="card-title  display-4 titulo2">Farmacia</h5>
+      <h5 class="card-title fs-3">La farmacia a las 24 horas del dia</h5>
     </div>
   </div>
 </div>

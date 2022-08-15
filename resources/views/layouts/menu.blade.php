@@ -2,7 +2,6 @@
 @section('cards')
     <div class="section-menu" style="min-height: 200vh">
         <div class="container-cards container mt-5">
-            <h2 class="fs-1 titulo2 ">Hamburguesas</h2>
             <div class="row row-cols-1 row-cols-md-4  g-4 mt-5 ">
                 @foreach($hamburguesas as $hamburguesa)
                     <div class="col">
