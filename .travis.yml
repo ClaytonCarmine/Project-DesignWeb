@@ -1,0 +1,21 @@
+language: php
+
+dist: amd64
+
+php: 
+
+  - 8.0
+
+services:
+  - mysql
+
+before_script:
+  - cp .env.example .env
+  - mysql -e "create database da3762tms2pum0"
+  - composer self-update
+  - composer install --no-interation --prefer-source
+  - php artisan key:generate
+  - php artisan migrate
+
+script:
+  - vendor/bin/phpunit
